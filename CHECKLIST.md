@@ -14,10 +14,12 @@ End-to-end checklist. Read [STANDARDS.md](STANDARDS.md) first.
 
 ## 3. Scaffold it
 - [ ] Copy the relevant `baseline/` files (`.editorconfig`, `.dockerignore`,
-      `.gitignore`, README skeleton) as a starting point.
+      `.gitignore`, README skeleton, and a `workflows/` CI example →
+      `.github/workflows/ci.yml`) as a starting point.
 - [ ] Build the minimal idiomatic skeleton per [STANDARDS.md](STANDARDS.md):
       source, one real test, a multi-stage non-root `Dockerfile` (service/worker)
-      or a `build → dist/` (static), and a README following §6.
+      or a `build → dist/` (static), `.github/workflows/ci.yml`, and a README
+      following §6.
 - [ ] Keep the Dockerfile/port/health in lockstep with the `deployPreset`.
 - [ ] Verify from a clean checkout: build green, tests pass, `docker build .`
       succeeds (service/worker) or `npm run build` emits `dist/` (static).

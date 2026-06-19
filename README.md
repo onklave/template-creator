@@ -18,8 +18,8 @@ standards govern.
 - **[CHECKLIST.md](CHECKLIST.md)** — how to add a brand-new template, end to end.
 - **[AGENTS.md](AGENTS.md)** — the brief for an agent scaffolding a template repo.
 - **[baseline/](baseline)** — drop-in baseline files (`.editorconfig`,
-  `.dockerignore`, `.gitignore` fragments, a README skeleton) to copy into a new
-  template.
+  `.dockerignore`, `.gitignore` fragments, a README skeleton, and
+  [`workflows/`](baseline/workflows) CI examples) to copy into a new template.
 
 ## The contract, in one breath
 

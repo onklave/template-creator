@@ -62,6 +62,22 @@ Rules:
 - Scripts/targets for the common loop: run, build, test (and lint where it fits).
 - A clean checkout MUST build green and pass tests with the documented commands.
 
+## 5a. CI
+
+Every template ships `.github/workflows/ci.yml` so generated projects have
+working CI from the first commit:
+- Trigger on `push` to `main` and on `pull_request`.
+- A **test/build** job running the stack's commands (`npm ci && npm test`;
+  static: `npm run build`; `pip install -e '.[dev]' && pytest`; `go vet/test/build`).
+- For containerised templates, a **docker** job running `docker build .` — this
+  validates the Dockerfile (and catches `.dockerignore` excluding a file the
+  build needs, e.g. a `README.md` referenced by `pyproject.toml`).
+- Copy a starting point from [`baseline/workflows/`](baseline/workflows).
+
+> `.dockerignore` must not exclude files the build COPYs or references (READMEs
+> referenced by `pyproject`/`package.json`, lockfiles, etc.). When in doubt, the
+> docker CI job will catch it.
+
 ## 6. README
 
 Every template README explains, in this order:
