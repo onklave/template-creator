@@ -1,0 +1,18 @@
+# Onklave template baseline — keep the build context small + reproducible.
+.git
+.gitignore
+.github
+node_modules
+dist
+build
+coverage
+*.log
+.env
+.env.*
+!.env.example
+__pycache__
+*.pyc
+.venv
+.pytest_cache
+.DS_Store
+README.md

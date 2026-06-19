@@ -1,0 +1,9 @@
+# Go — copy to .gitignore
+/bin/
+*.test
+*.out
+coverage.*
+.env
+.env.*
+!.env.example
+.DS_Store
